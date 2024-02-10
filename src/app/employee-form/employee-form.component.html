@@ -1,3 +1,4 @@
+<div class = "overlay-container">
 <div class="overlay">
   <h1>Employee Form</h1>
     <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
@@ -37,7 +38,7 @@
       <div class="error-message" *ngIf="(employeeForm.get('pincode')?.errors?.['required'] || employeeForm.get('pincode')?.invalid) && (employeeForm.get('pincode')?.dirty || employeeForm.get('pincode')?.touched)">
         6 digit Pincode is required
       </div>
-      
       <button type="submit" [class.disabled]="!employeeForm.valid">Submit</button>
       </form>
+      </div>
       </div>

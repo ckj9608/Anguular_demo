@@ -4,6 +4,10 @@ h1 {
     font-weight: bold;
     text-align: center;
   }
+.overlay-container{
+  max-height: 100%;
+  overflow-y: auto;
+}
 .overlay {
     background-color: #fff;
     border-radius: 5px;
