@@ -1,0 +1,40 @@
+<div class="employee-form-header">
+  <h1 class="header-title">Employee Table</h1>
+  <button nz-button nzType="primary" (click)="addEmployee()" class="add-button">Add Employee</button>
+</div>
+<div class="employee-table-container">
+  <div class = "div-employee">
+  
+<nz-table #employeeTable> 
+  <thead>
+    <tr>
+      <th nzWidth="150px">First Name</th>
+      <th nzWidth="100px">Last Name</th>
+      <th nzWidth="150px">Email</th>
+      <th nzWidth="150px">Mobile</th>
+      <th nzWidth="200px">Address</th>
+      <th nzWidth="150px">City</th>
+      <th nzWidth="100px">Pincode</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="!hasData" class="no-data">
+      <td colspan="12">No data available</td> 
+    <tr *ngFor="let employee of employees; let i = index">
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.mobile }}</td>
+      <td>{{ employee.address }}</td>
+      <td>{{ employee.city }}</td>
+      <td>{{ employee.pincode }}</td>
+      <td>
+        <button nz-button nzType="danger" class="delete-button" (click)="deleteEmployee(i)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+  
+</nz-table>
+</div>
+</div>

@@ -1,0 +1,43 @@
+<div class="overlay">
+  <h1>Employee Form</h1>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      
+      <label for="firstName">First Name<span>*</span></label>
+      <input formControlName="firstName" type="text" id="firstName" maxlength="16" pattern="^[^\s]+$">
+      <div class="error-message" *ngIf="(employeeForm.get('firstName')?.errors?.['required'] || employeeForm.get('firstName')?.invalid) && (employeeForm.get('firstName')?.dirty || employeeForm.get('firstName')?.touched)">
+        First Name is required
+      </div>
+      <label for="lastName">Last Name<span>*</span></label>
+      <input formControlName="lastName" type="text" id="lastName" maxlength="14" pattern="^[^\s]+$">
+      <div class="error-message" *ngIf="(employeeForm.get('lastName')?.errors?.['required'] ||  employeeForm.get('lastName')?.invalid) && (employeeForm.get('lastName')?.dirty || employeeForm.get('lastName')?.touched)">
+        Last Name is required
+      </div>
+      <label for="email">Email<span>*</span></label>
+      <input formControlName="email" type="text" id="email">
+      <div class="error-message" *ngIf="(employeeForm.get('email')?.errors?.['required'] || employeeForm.get('email')?.invalid) && (employeeForm.get('email')?.dirty || employeeForm.get('email')?.touched)">
+        Valid Email is required
+      </div>
+      <label for="mobile">Mobile<span>*</span></label>
+      <input formControlName="mobile" type="number" id="mobile">
+      <div class="error-message" *ngIf="(employeeForm.get('mobile')?.errors?.['required'] || employeeForm.get('mobile')?.invalid) && (employeeForm.get('mobile')?.dirty || employeeForm.get('mobile')?.touched)">
+        10 digit Mobile no. is required
+      </div>
+      <label for="address">Address<span>*</span></label>
+      <input formControlName="address" type="text" id="address" maxlength="50" pattern="^[^\s].*">
+      <div class="error-message" *ngIf="(employeeForm.get('address')?.errors?.['required'] || employeeForm.get('address')?.invalid) && (employeeForm.get('address')?.dirty || employeeForm.get('address')?.touched)">
+        Address is required
+      </div>
+      <label for="city">City<span>*</span></label>
+      <input formControlName="city" type="text" id="city" maxlength="20" pattern="^[^\s].*">
+      <div class="error-message" *ngIf="(employeeForm.get('city')?.errors?.['required'] || employeeForm.get('city')?.invalid) && (employeeForm.get('city')?.dirty || employeeForm.get('city')?.touched)">
+        City is required
+      </div>
+      <label for="pincode">Pincode<span>*</span></label>
+      <input formControlName="pincode" type="number" id="pincode">
+      <div class="error-message" *ngIf="(employeeForm.get('pincode')?.errors?.['required'] || employeeForm.get('pincode')?.invalid) && (employeeForm.get('pincode')?.dirty || employeeForm.get('pincode')?.touched)">
+        6 digit Pincode is required
+      </div>
+      
+      <button type="submit" [class.disabled]="!employeeForm.valid">Submit</button>
+      </form>
+      </div>

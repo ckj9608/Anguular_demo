@@ -1,0 +1,51 @@
+.employee-form-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f4f4;
+  padding: 10px;
+  z-index: 1000;
+  text-align: center;
+}
+  
+  .header-title {
+    font-size: 21px;
+    margin: 0;
+  }
+  .add-button{
+    background-color: #0d44c4;
+    color:#fff;
+    border-radius: 5px;
+  }
+  .employee-table-container {
+    margin-top: 60px;
+  }
+  .div-employee{
+    margin : 20px;
+  }
+  
+  nz-table {
+    width: 100%;
+  }
+ 
+  nz-table thead th{
+    text-align: center; 
+  }
+  nz-table tbody td {
+  text-align: center;
+  }
+  
+  .delete-button {
+    padding: 0 8px;
+    background-color: #ff2a00;
+    color:#fff;
+    border-radius: 5px;
+  }
+  .no-data{
+    text-align: center;
+    color:red;
+}
