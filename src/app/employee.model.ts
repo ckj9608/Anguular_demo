@@ -3,7 +3,7 @@ export interface Employee {
     lastName: string;
     email: string;
     mobile: string;
-    address?: string; // Optional field
-    city?: string;    // Optional field
-    pincode?: string; // Optional field
+    address?: string;
+    city?: string;  
+    pincode?: string;
   }
